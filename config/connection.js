@@ -1,12 +1,17 @@
 //   mysql package and connections
 let mysql = require("mysql");
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+if (process.env.JAWSDB_URL) {
+  var connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "<YOUR USERNAME HERE>",
+    password: "<YOUR PASSWORD HERE>",
+    database: "burgers_db"
+  });
+}
+
 connection.connect();
-// {
-//   host: "pwcspfbyl73eccbn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-//     port: 3306,
-//       user: "npt7mpc0t3wc5dzv",
-//         password: "be4u6rundpj2gkd4",
-//           database: "kwd80ib9242z1vr7"
-// }
+
 module.exports = connection;
