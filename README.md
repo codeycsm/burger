@@ -13,4 +13,4 @@ Create a list of burgers you want to eat. After eating a burger on the list clic
 - MySQL
 - ORM
 
-[Try Me](https://pure-ravine-29988.herokuapp.com/s)
+# [Try Me](https://pure-ravine-29988.herokuapp.com/)
