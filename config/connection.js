@@ -1,7 +1,7 @@
 //   mysql package and connections
 let mysql = require("mysql");
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
-
+connection.connect();
 // {
 //   host: "pwcspfbyl73eccbn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 //     port: 3306,
